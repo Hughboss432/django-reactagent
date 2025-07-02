@@ -1,0 +1,8 @@
+langchain-core
+langgraph
+mcp[cli]
+langchain-mcp-adapters
+langchain-ollama
+django
+typing-extensions
+pydantic
