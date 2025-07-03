@@ -10,11 +10,11 @@ Transforme o repositório em um app local que usa Llama 3.2 via **Ollama** e f
 | ------------------- | ------------------ | ----------------------------------------------------------------------------- | -------- |
 | **Python**          | ≥ 3.10             | [https://python.org](https://python.org)                                      |          |
 | **Git**             | qualquer           | [https://git-scm.com](https://git-scm.com)                                    |          |
-| **Ollama**          | 0.1.32 ou maior    | \`\`\`curl -fsSL [https://ollama.ai/install.sh](https://ollama.ai/install.sh) | sh\`\`\` |
+| **Ollama**          | 0.1.32 ou maior    | [https://ollama.com/](https://ollama.com/)                                    | sh\`\`\` |
 | **Poetry** ou `pip` | opcional           | para instalar dependências                                                    |          |
 
 > **Windows** / **macOS**: baixe o instalador gráfico em [https://ollama.ai](https://ollama.ai).
-
+> **Linux** (pelo snap): sudo snap install ollama
 ---
 
 ## 1 ▪ Baixe o modelo Llama 3.2
@@ -32,7 +32,7 @@ Esperado: download de \~4 GB; uma vez concluído o modelo fica disponível loc
 ```bash
 git clone https://github.com/Hughboss432/automato-reactagent.git
 cd seu‑repo
-# ambiente virtual opcional X (OBRIGATORIO ATUALMENTE)
+# ambiente virtual
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -51,18 +51,17 @@ python server.py
 
 ---
 
-## 4 ▪ Execute a aplicação Streamlit
+## 4 ▪ Execute a aplicação django
 
 Abra um segundo terminal (deixe `server.py` rodando) e digite:
 
 ```bash
-streamlit run app.py
+python manage.py runserver
 ```
 
-Streamlit imprimirá algo como:
+O terminal imprimirá o endereço local:
 
 ```
-  You can now view your Streamlit app in your browser.
   Local URL: http://localhost:xxxx
 ```
 
@@ -98,4 +97,4 @@ Windows PowerShell:
 
 ## Licença
 
-Coloque aqui sua licença (MIT, Apache‑2.0, Proprietária etc.).
+MIT
