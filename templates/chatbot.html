@@ -8,6 +8,7 @@
 
     .messages-box {
       flex: 1;
+      background-color: #2e2e2e;
       overflow-y: auto;
     }
 
@@ -26,12 +27,14 @@
     }
 
     .sent {
-      background-color: #dcf8c6;
+      background-color: #b3ffb3;
+      border-radius: 20px;
       align-self: flex-end;
     }
 
     .received {
-      background-color: #f1f0f0;
+      background-color: #adffed;
+      border-radius: 20px;
       align-self: flex-start;
     }
 
@@ -41,7 +44,7 @@
       gap: 8px;                 /* espaço entre as duas linhas           */
       bottom: 0; left: 0; right: 0;
       padding: 10px;
-      background: #f8f9fa;
+      background: #636363;
     }
 
     .widgets-form{              /* opção: mantém botões lado a lado      */
@@ -56,8 +59,16 @@
       border-right: none;
     }
 
+    .btn-send-mic {
+      border-radius: 20px 0 0 20px;
+    }
+
     .btn-send {
-      border-radius: 0;
+      border-radius: 0 20px 20px 0;
+    }
+
+    .file-input {
+      border-radius: 20px;
     }
 
     .chat-container {
@@ -78,14 +89,14 @@
       <ul class="list-unstyled messages-list">
         
         <li class="message received">
-          <div class="message-text">
+          <!-- <div class="message-text">
             <div class="message-sender">
               <b>Light-Phantom</b>
             </div>
             <div class="message-content">
               Hi, I am your AI Chatbot, you can ask me anything.
             </div>
-          </div>
+          </div> -->
         </li>
       </ul>
       
@@ -100,7 +111,7 @@
       <input type="file" class="form-control file-input" name="file" id="fileInput">
     </div>
     <div class="input-group">
-      <button type="button" class="btn btn-primary btn-send mic-input" id="recBtn">🎤 Mic</button>
+      <button type="button" class="btn btn-primary btn-send-mic mic-input" id="recBtn">🎤 Mic</button>
       <input type="text" class="form-control message-input" placeholder="Type your message...">
       <div class="input-group-append">
         <button type="submit" class="btn btn-primary btn-send">Send</button>
@@ -126,12 +137,21 @@
       messageItem.classList.add('message', 'sent');
       messageItem.innerHTML = `
         <div class="message-text">
-          <div class="message-sender"><b>You</b></div>
+          <div class="message-sender">
+            <b>User - (${ new Date().toLocaleTimeString(
+                    [], 
+                    {year: 'numeric', 
+                     month: 'numeric', 
+                     day: 'numeric', 
+                     hour: '2-digit', 
+                     minute: '2-digit'
+            }) }):</b>
+          </div>
           <div class="message-content">${message}</div>
         </div>`;
       messageList.appendChild(messageItem);
 
-      messageInput.value = '';          // agora limpa
+      messageInput.value = '';          // limpar barra
 
       // envia ao servidor
       fetch('', {
@@ -148,7 +168,16 @@
         reply.classList.add('message', 'received');
         reply.innerHTML = `
           <div class="message-text">
-            <div class="message-sender"><b>LPhantom</b></div>
+            <div class="message-sender">
+              <b>LPhantom - (${ new Date().toLocaleTimeString(
+                    [], 
+                    {year: 'numeric', 
+                     month: 'numeric', 
+                     day: 'numeric', 
+                     hour: '2-digit', 
+                     minute: '2-digit'
+              }) }):</b>
+            </div>
             <div class="message-content">${data.response}</div>
           </div>`;
         messageList.appendChild(reply);
