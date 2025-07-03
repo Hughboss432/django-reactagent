@@ -73,7 +73,7 @@ mcp dev server.py
 O terminal exibirá algo como:
 
 ```
-Local URL: http://localhost:8001
+Local URL: http://localhost:xxxx
 ```
 
 > *Obs.* Escuta em stdio/pipe; nenhum port TCP é aberto (funciona de forma local).
@@ -88,7 +88,7 @@ Abra o **terminal** e digite:
 python manage.py runserver
 ```
 
-Acesse [http://localhost:8000](http://localhost:8000) no navegador. O chat usará o modelo **Qwen 3** local e chamará as ferramentas servidas pelo MCP.
+Acesse [http://localhost:8000](http://localhost:xxxx) no navegador. O chat usará o modelo **Qwen 3** local e chamará as ferramentas servidas pelo MCP.
 
 ---
 
