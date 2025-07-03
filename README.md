@@ -19,6 +19,10 @@ Transforme o repositório em um app local que usa Llama 3.2 via **Ollama** e f
 ```bash
 sudo snap install ollama
 ```
+Iniciar ollama:
+```bash
+ollama serve
+```
 ---
 
 ## 1 ▪ Baixe o modelo Llama 3.2
