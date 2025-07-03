@@ -14,7 +14,11 @@ Transforme o repositório em um app local que usa Llama 3.2 via **Ollama** e f
 | **Poetry** ou `pip` | opcional           | para instalar dependências                                                    |          |
 
 > **Windows** / **macOS**: baixe o instalador gráfico em [https://ollama.ai](https://ollama.ai).
-> **Linux** (pelo snap): sudo snap install ollama
+
+> **Linux** (pelo snap):
+```bash
+sudo snap install ollama
+```
 ---
 
 ## 1 ▪ Baixe o modelo Llama 3.2
