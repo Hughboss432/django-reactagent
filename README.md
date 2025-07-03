@@ -6,12 +6,12 @@ Transforme o repositório em um app local que usa Llama 3.2 via **Ollama** e f
 
 ## Pré‑requisitos
 
-| Ferramenta          | Versão recomendada | Como instalar                                                                 |          |
-| ------------------- | ------------------ | ----------------------------------------------------------------------------- | -------- |
-| **Python**          | ≥ 3.10             | [https://python.org](https://python.org)                                      |          |
-| **Git**             | qualquer           | [https://git-scm.com](https://git-scm.com)                                    |          |
-| **Ollama**          | 0.1.32 ou maior    | [https://ollama.com/](https://ollama.com/)                                    | sh\`\`\` |
-| **Poetry** ou `pip` | opcional           | para instalar dependências                                                    |          |
+| Ferramenta          | Versão recomendada | Como instalar                                                                 |          
+| ------------------- | ------------------ | ----------------------------------------------------------------------------- | 
+| **Python**          | ≥ 3.10             | [https://python.org](https://python.org)                                      |          
+| **Git**             | qualquer           | [https://git-scm.com](https://git-scm.com)                                    |          
+| **Ollama**          | 0.1.32 ou maior    | [https://ollama.com/](https://ollama.com/)                                    | 
+| **Poetry** ou `pip` | opcional           | para instalar dependências                                                    |   
 
 > **Windows** / **macOS**: baixe o instalador gráfico em [https://ollama.ai](https://ollama.ai).
 
