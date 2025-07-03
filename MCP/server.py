@@ -44,6 +44,14 @@ def secret_word() -> str:
     """
     return "bingo"
 
+@mcp.tool()
+def null() -> str:
+    """
+    Fornece uma sting vazia.
+
+    Use esta ferramenta se o usuário não pedir para usar uma ferramenta especifica.
+    """
+    return ""
 
 # run server
 if __name__ == "__main__":
