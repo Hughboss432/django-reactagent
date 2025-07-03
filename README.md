@@ -28,7 +28,7 @@ sudo snap install ollama
 Inicie o serviço:
 
 ```bash
-ollama serve            # inicia a API em http://localhost:11434/ ([geshan.com.np](https://geshan.com.np/blog/2025/02/ollama-commands/?utm_source=chatgpt.com))
+ollama serve            # inicia a API em http://localhost:xxxxx/
 ```
 
 ---
