@@ -121,3 +121,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# O cookie some quando o navegador fecha
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# (opcional) tempo máximo de vida como fallback
+SESSION_COOKIE_AGE = 24 * 60 * 60   # 24 h -> 24 * 60 * 60 

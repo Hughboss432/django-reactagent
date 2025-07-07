@@ -22,7 +22,7 @@ async def connect_to_server(user_input):
                 #     print(f"  - {tool.name}: {tool.description}")
 
                 tools = await load_mcp_tools(session)
-                model = ChatOllama(model="llama3.2").bind_tools(tools)
+                model = ChatOllama(model="qwen3").bind_tools(tools)
                 app = create_graph_with_tools(tools)
 
                 inputs = {
