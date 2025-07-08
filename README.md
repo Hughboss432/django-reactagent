@@ -1,4 +1,4 @@
-# LPhantom – Quick Start Guide
+# Light-Phantom – Quick Start Guide
 
 Transforme este repositório em um *app* local que conversa com modelos open‑source através do **Ollama** e expõe ferramentas via **MCP**.
 
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 ---
 
-## 3 ▪ Inicie o servidor de ferramentas **MCP**
+## 3 ▪ Testando o servidor de ferramentas **MCP**
 
 O servidor MCP localizado na pasta `MCP/` é iniciado automaticamente ao executar a aplicação. Ele expõe ferramentas como `add`, `subtract`, `multiply`, `secret_word`, entre outras.
 
@@ -92,27 +92,21 @@ Acesse [http://localhost:8000](http://localhost:xxxx) no navegador. O chat usar�
 
 ---
 
-## 5 ▪ Script auxiliar (opcional – ainda em testes)
-
-```bash
-./run.sh   # faz os passos 1‑4 automaticamente (Linux/macOS)
-```
-
-No Windows:
-
-```powershell
-.\run.ps1
-```
-
----
-
 ## Problemas comuns
 
 | Sintoma                              | Possível causa                           | Solução                                                                        |
 | ------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------ |
-| `ERR: model not found`               | Modelo Qwen3 não baixado                 | Execute `ollama pull qwen3` e confirme em `ollama list`.                       |
-| Ferramenta aparece como JSON no chat | Fluxo `agent → tools → agent` incompleto | Revise `create_graph_with_tools()`: o nó **tools** deve retornar ao **agent**. |
-| `TypeError: object is not awaitable` | Mistura de nós sync/async                | Use `app.astream()` ou converta o nó para síncrono.                            |
+| `undefined`                          | Modelo Ollama não baixado/Não reconhecido ou caminho do servidor MCP alterado. | Execute `ollama pull qwen3`, confirme em `ollama list` e verifique o caminho do servidor MCP. |
+
+---
+
+## Proximas etapas
+
+- [x] Permitir que o usuário envie perguntas ao modelo Ollama local e receba respostas que utilizem uma ou mais ferramentas armazenadas no servidor MCP local, usando um fluxo ReAct com LangGraph.
+- [ ] Implementar memória de curto prazo para o modelo, utilizando dados armazenados no banco de dados.
+- [ ] Permitir que o usuário envie mensagens de áudio para o modelo.
+- [ ] Permitir que o usuário envie arquivos para o modelo.
+- [ ] Oferecer maior flexibilidade ao administrador, permitindo a alteração do modelo Ollama e a conexão com um servidor MCP externo.
 
 ---
 
