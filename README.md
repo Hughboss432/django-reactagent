@@ -100,6 +100,16 @@ Acesse [http://localhost:8000](http://localhost:xxxx) no navegador. O chat usar�
 
 ---
 
+## Proximas etapas
+
+- [x] Permitir que o usuário envie perguntas ao modelo Ollama local e receba respostas que utilizem uma ou mais ferramentas armazenadas no servidor MCP local, usando um fluxo ReAct com LangGraph.
+- [ ] Implementar memória de curto prazo para o modelo, utilizando dados armazenados no banco de dados.
+- [ ] Permitir que o usuário envie mensagens de áudio para o modelo.
+- [ ] Permitir que o usuário envie arquivos para o modelo.
+- [ ] Oferecer maior flexibilidade ao administrador, permitindo a alteração do modelo Ollama e a conexão com um servidor MCP externo.
+
+---
+
 ## Licença
 
 MIT
