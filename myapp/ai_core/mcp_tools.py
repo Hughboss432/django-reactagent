@@ -8,7 +8,7 @@ from .graph_logic import create_graph_with_tools
 async def connect_to_server(user_input):
     server_params = StdioServerParameters(
         command="python",
-        args=["./MCP/server.py"],  # Caminho para servidor MCP
+        args=["./myapp/mcp/server_local.py"],  # Caminho para servidor MCP
     )
     try:
         async with stdio_client(server_params) as (read, write):

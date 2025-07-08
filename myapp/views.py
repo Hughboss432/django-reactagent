@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from django.http import JsonResponse
 #
-from .app.mcp_tools import connect_to_server
+from .ai_core.mcp_tools import connect_to_server
 from django.utils import timezone
 from .models import Chat
 from asgiref.sync import sync_to_async
@@ -22,14 +22,14 @@ class ReactAgentView(View):
 
     async def post(self, request):
         message = request.POST.get('message', '').strip()
-        if not message:
-            return JsonResponse({'error': 'mensagem vazia'}, status=400)
-
+        
         try:
             response = await connect_to_server(message)
         except Exception as e:
             return JsonResponse(
-                {'error': f'Falha ao falar com MCP: {e}'},
+                {
+                    'message': f'Falha ao utlizar modelo/MCP server: {e}'
+                },
                 status=502
             )
 
