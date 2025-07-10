@@ -17,9 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from myapp.views import ReactAgentView
+from myapp.views import ReactAgentView, login, logout, pathconf
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ReactAgentView.as_view(), name="react_agent")
+    path('', ReactAgentView.as_view(), name="react_agent"),
+    path('login', login.as_view(), name="login"),
+    path('path', pathconf.as_view(), name="path"),
+    path('logout', logout.as_view(), name="logout")
 ]

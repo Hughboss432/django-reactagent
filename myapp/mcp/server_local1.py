@@ -56,6 +56,3 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unknown transport: {transport}")
     
-#mcp dev server.py #teste de ferramentas
-#sudo lsof -i :porta #identificar porta do teste
-#sudo kill -9 pid #kill process do teste
